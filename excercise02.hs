@@ -8,7 +8,7 @@ instance Functor [] where
 
 --instance Applicative [] where
 --  -- pure :: a -> [a]
---  pure x = x : []
+--  pure x = [x]
 --  
 --  -- (<*>) :: [(a -> b)] -> [a] -> [b]
 --  [] <*> _  = []
@@ -17,4 +17,10 @@ instance Functor [] where
 
 
 instance Monad [] where
-    
+    -- return :: a -> m a
+    return x = [x]
+
+    -- (>>=) m a -> (a -> m b) -> m b
+    [x] >>= f x = [x]
+    _   >>= _   = []
+

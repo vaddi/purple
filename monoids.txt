@@ -1,0 +1,85 @@
+#
+# Monoide
+#
+
+Eine Menge von Elementen, die man irgendwie mit besonderen Regeln verknüpfen kann. 
+Und wenn die Operation nicht assoziativ ist, nennt man das dann Magma
+
+# Regeln:
+1. Menge muss bzgl. ihrer binären Operation abgeschlossen sein
+2. Die binäre Operation muss assoziativ sein
+3. Es muss ein neutrales Element (Identitätselement existieren)
+*. Wenn ein Monoid kein neutrales Element besitzt, ist es eine Halbgruppe.
+
+
+# Erste Regel:
+die Menge muss bzgl. der binären Operation abgeschlossen sein: Das heißt, wenn du die Operation durchführst, muss wieder ein Element derselben Menge herauskommen.
+Heißt, wenn du zwei ganze Zahlen verknüpfst, muss wieder eine ganze Zahl herauskommen.
+In der Programmierwelt darf man Mengen gerne mit Typen gleichsetzen. Z.B.: bei Strings ist das Ergebnis von 
+
+("foobar" substring "foo") substring "ar" = f =/= "foobar" substring ( "foo" substring "ar" ) = ?
+
+
+# Zweite Regel:
+Assoziativ meint Operationsgleiches Ergebnis. Generell so zu sehen:
+
+a ⚬ (b ⚬ c) = (a ⚬ b) ⚬ c
+
+2 + (3 + 1) = 6 =/= (2 + 3) + 1 = 6	Addition ist Assoziativ
+2 * (3 * 1) = 6 =/= (2 * 3) * 1 = 6	Division ist Assoziativ
+2 - (3 - 1) = 0 =/= (2 - 3) - 1 = -2	Subtraktion ist nicht Assoziativ
+( 4 : 2 ) : 2 = 1 =/= 4 : ( 2 : 2 ) = 4	Division ist nicht Assoziativ
+
+
+# Dritte Regel: 
+Das besondere Element, nämlich das sogenannte Identitätselement.
+
+
+# Fazit
+Man kann den ganzen Tag damit verbringen Tripple zu finden. Das macht viel Spaß.
+
+Beispielmengen:
+ℤ ist die Menge aller ganzen Zahlen, also {..., -2, -1, 0, 1, 2 ...}
+String ist die Menge aller Strings, als {..., h, i, j, l ...}
+
+Zahlen
+(ℤ, +, 0) bildet ein Monoid.
+
+Strings
+(String, concat, "") bildet ein Monoid.
+
+Promises
+(Promise, race, never) bildet ein Monoid.
+
+
+# Kommutativ
+
+Kommutativ heißt, dass man es vertauschen darf. 
+a + b = b + a
+a * b = b * a
+Also "foo" concat "bar" ist nicht dasselbe wie "bar" concat "foo" und damit nicht Kommutativ.
+
+
+# Assoziativ
+
+Wenn die Reihenfolge der Ausführung keine Rolle spielt. Die Klammerung mehrerer assoziativer Verknüpfungen ist beliebig. Deshalb kann man es anschaulich auch „Klammergesetz“ nennen.
+
+
+
+
+
+
+# purple book
+http://haskellbook.com/assets/img/sample.pdf
+
+
+# Installation mit stack
+curl -sSL https://get.haskellstack.org/ | sh
+
+https://docs.haskellstack.org/en/stable/README/
+http://haskellbook.com/
+$ brew install stack
+(Stack ist vergleichbar mit npm/yarn/bundle)
+Mit dem kleinen Twist, dass Stack *auch* die GHC Version (also den Haskell Compiler) mitliefert.
+
+
