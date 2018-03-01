@@ -6,21 +6,30 @@ instance Functor [] where
   fmap f []     = []
   fmap f (x:xs) = f x : fmap f xs
 
---instance Applicative [] where
---  -- pure :: a -> [a]
---  pure x = [x]
---  
---  -- (<*>) :: [(a -> b)] -> [a] -> [b]
---  [] <*> _  = []
---  _  <*> [] = []
---  af <*> av = 
+instance Applicative [] where
+  -- pure :: a -> [a]
+  pure x = [x]
 
+  -- (<*>) :: [(a -> b)] -> [a] -> [b]
+  [] <*> _  = []
+  _  <*> [] = []
+  af <*> av = undefined
 
 instance Monad [] where
     -- return :: a -> m a
     return x = [x]
 
-    -- (>>=) m a -> (a -> m b) -> m b
-    [x] >>= f x = [x]
-    _   >>= _   = []
+    -- (>>=) :: [t] -> (t -> [u]) -> [u]
+    xs >>= f = concat (fmap f xs)
+    _  >>= _ = []
+
+
+
+    -- fmap ::         (a -> b) -> [a] -> [b]
+-- cata :: (a -> a -> a) -> 
+-- cata f t []     = t
+-- cata f t (x:xs) = f x (cata f t xs)
+-- 
+-- concat = foldlr (++) []
+
 

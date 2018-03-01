@@ -134,7 +134,7 @@ drop' n (_:xs)          = drop' (n - 1) xs
 --dropWhile' f xs = 
 
 -- Drops elements until the predicate fails.
---takeWhile' :: (a -> Bool) -> [a] -> [a]
+takeWhile' :: (a -> Bool) -> [a] -> [a]
 takeWhile' _ []           = []
 takeWhile' p (x:xs)
              | p x        = x : takeWhile p xs
