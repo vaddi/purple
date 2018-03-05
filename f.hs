@@ -13,11 +13,17 @@ bar = Branch (Branch Empty 20 Empty) 10 (Branch Empty 5 Empty)
 
 instance Functor Tree where
   -- fmap :: (a -> b) -> f a -> f b
-  fmap f Empty = Empty
+  fmap f Empty          = Empty
   fmap f (Branch l v r) = Branch (fmap f l) (f v) (fmap f r)
 
 instance Foldable Tree where
-  foldr = undefined
+  -- foldr :: (a -> b -> b) -> b -> t a -> b
+  foldr f g Empty                   = g
+  foldr f g (Branch Empty v Empty)  = g
+  foldr f g (Branch l v r)          = foldr f (f g (foldr f g l)) r
+  --f v1 v2 where
+  --  v1 = foldr f g l
+  --  v2 = foldr f g r
 
 cata :: (b -> a -> b -> b) -> b -> Tree a -> b
 cata g z (Empty)        = z
