@@ -56,4 +56,4 @@ half x = if x `mod` 2 == 0 then
          Just (x `div` 2) else
          Nothing
 
-
+-- Maybe ist eine Typfunktion, weil der Kind (* -> *) ist

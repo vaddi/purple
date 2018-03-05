@@ -8,7 +8,7 @@ instance Applicative Maybe where
   -- return :: a -> Maybe a
   pure = return
 
-  -- (<*>) :: Maybe (a -> b) -> Maybe a Maybe b
+  -- (<*>) :: Maybe (a -> b) -> Maybe a -> Maybe b
   Just f <*> Just x = Just (f x)
   _      <*> _      = Nothing
 
