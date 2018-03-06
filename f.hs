@@ -18,9 +18,9 @@ instance Functor Tree where
 
 instance Foldable Tree where
   -- foldr :: (a -> b -> b) -> b -> t a -> b
-  foldr f g Empty                   = g
+  foldr _ g Empty                   = g
   foldr f g (Branch Empty v Empty)  = g
-  foldr f g (Branch l v r)          = foldr f (f g (foldr f g l)) r
+  foldr f g (Branch l v r)          = foldr f (foldr f g l) r
   --f v1 v2 where
   --  v1 = foldr f g l
   --  v2 = foldr f g r
