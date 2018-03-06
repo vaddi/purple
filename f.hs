@@ -16,14 +16,12 @@ instance Functor Tree where
   fmap f Empty          = Empty
   fmap f (Branch l v r) = Branch (fmap f l) (f v) (fmap f r)
 
+-- foldable on the tree type
 instance Foldable Tree where
   -- foldr :: (a -> b -> b) -> b -> t a -> b
-  foldr _ g Empty                   = g
-  foldr f g (Branch Empty v Empty)  = g
-  foldr f g (Branch l v r)          = foldr f (foldr f g l) r
-  --f v1 v2 where
-  --  v1 = foldr f g l
-  --  v2 = foldr f g r
+  foldr _ z Empty                   = z
+  foldr f z (Branch Empty v Empty)  = f v z
+  foldr f z (Branch l v r)          = foldr f (f v (foldr f z r)) l
 
 cata :: (b -> a -> b -> b) -> b -> Tree a -> b
 cata g z (Empty)        = z
@@ -34,7 +32,7 @@ cata g z (Branch l v r) = g v1 v2 v3 where
 
 
 
--- cata Branch Empty = id
+  -- cata Branch Empty = id
 
 
 cata' :: (a -> a -> a) -> a -> [a] -> a
