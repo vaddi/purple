@@ -10,4 +10,7 @@ Some of my very dirty haskell lerning stuff. Do not pull this, it is complete us
 * [http://www.fh-wedel.de/~si/seminare/ws03/Ausarbeitung/6.trees/trees2.htm](http://www.fh-wedel.de/~si/seminare/ws03/Ausarbeitung/6.trees/trees2.htm)
 * [https://en.wikipedia.org/wiki/Boolean_algebra](https://en.wikipedia.org/wiki/Boolean_algebra)
 * [https://github.com/bitemyapp/learnhaskell/](https://github.com/bitemyapp/learnhaskell/)
+* [https://github.com/ekmett](https://github.com/ekmett)
+* [https://aphyr.com/posts/342-typing-the-technical-interview](https://aphyr.com/posts/342-typing-the-technical-interview)
+* [https://wiki.haskell.org/Fold](https://wiki.haskell.org/Fold)
 
