@@ -30,13 +30,11 @@ cata g z (Branch l v r) = g v1 v2 v3 where
   v2 = v
   v3 = cata g z r
 
-
-
   -- cata Branch Empty = id
-
 
 cata' :: (a -> a -> a) -> a -> [a] -> a
 cata' _ z []     = z
 cata' f z (x:xs) = x `f` (cata' f z xs)
 
 -- cata (:) [] = id
+-- (+1) <$> [1,2,3]

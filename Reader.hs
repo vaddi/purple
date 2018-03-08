@@ -1,14 +1,10 @@
 {-# LANGUAGE GADTs #-}
+
+-- Reader :: * -> * -> *
 data Reader r a where
   MkReader :: (r -> a) -> Reader r a
 
 -- r = Enviroment
-
-
-
-r -> a
-     a -> b
-r       -> b
 
 instance Functor (Reader r) where
   -- fmap :: (a -> b) -> f a -> f b
