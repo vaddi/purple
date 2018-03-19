@@ -3,6 +3,8 @@
 data BTree a  = Leaf a
               | Branch (BTree a) (BTree a)
 
+data Tree a = Node a
+            | Branch (Tree a) a (Node a)
 -- simple Tree's
 b1,b2,b3 :: BTree Int
 b1 = Leaf 10
