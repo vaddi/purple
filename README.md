@@ -10,4 +10,4 @@ Some of my very dirty haskell lerning stuff. Do not pull this, it is complete us
 * [http://www.fh-wedel.de/~si/seminare/ws03/Ausarbeitung/6.trees/trees2.htm](http://www.fh-wedel.de/~si/seminare/ws03/Ausarbeitung/6.trees/trees2.htm)
 * [https://en.wikipedia.org/wiki/Boolean_algebra](https://en.wikipedia.org/wiki/Boolean_algebra)
 * [https://github.com/bitemyapp/learnhaskell/](https://github.com/bitemyapp/learnhaskell/)
-
+* [Haskell IO](https://www.vex.net/~trebla/haskell/IO.xhtml)
