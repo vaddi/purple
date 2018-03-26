@@ -23,6 +23,7 @@ instance Foldable Tree where
   foldr f z (Branch Empty v Empty)  = f v z
   foldr f z (Branch l v r)          = foldr f (f v (foldr f z r)) l
 
+-- cata φ
 cata :: (b -> a -> b -> b) -> b -> Tree a -> b
 cata g z (Empty)        = z
 cata g z (Branch l v r) = g v1 v2 v3 where
