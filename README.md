@@ -13,4 +13,4 @@ Some of my very dirty haskell lerning stuff. Do not pull this, it is complete us
 * [https://github.com/ekmett](https://github.com/ekmett)
 * [https://aphyr.com/posts/342-typing-the-technical-interview](https://aphyr.com/posts/342-typing-the-technical-interview)
 * [https://wiki.haskell.org/Fold](https://wiki.haskell.org/Fold)
-
+* [Haskell IO](https://www.vex.net/~trebla/haskell/IO.xhtml)

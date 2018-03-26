@@ -67,6 +67,20 @@ Wenn die Reihenfolge der Ausführung keine Rolle spielt. Die Klammerung mehrerer
 
 
 
+# Operators
+-- bind
+(>>=) :: m => m a -> (a -> m b) -> m b 
+
+-- concat
+(.) :: (b -> c) -> (a -> b) -> a -> c
+
+
+
+
+
+
+
+
 
 
 # purple book
