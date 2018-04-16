@@ -1,5 +1,6 @@
 import Data.List ((\\))
 
+-- read files and compare contents
 makeList :: String -> [Int]
 makeList = fmap read .  unlines
 
@@ -13,3 +14,5 @@ main = do
   where
     diff :: String -> String -> [Int]
     diff l r = makeList l \\ makeList r
+
+
